@@ -228,7 +228,7 @@ header div img{
     margin-top: 10px;
     font-weight: bold;
 }
-
+/*
 .iframe-contenedor {
     margin-top: 20px;
     text-align: center;
@@ -242,6 +242,34 @@ header div img{
     font-weight:lighter;
 
 }
+*/
+
+.iframe-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Limita el ancho al 100% del contenedor */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.iframe-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.iframe-contenedor iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto */
+}
+
+
+
+
 
 
 /*!-------------------------*/
@@ -1085,3 +1113,18 @@ footer
         flex: 0 1 50%;
     }
 }
+
+
+/* Ajustes para diferentes dispositivos */
+@media (min-width: 768px) {
+    .iframe-contenedor {
+        max-width: 80%; /* En tabletas, ocupa el 80% del contenedor */
+    }
+}
+
+@media (min-width: 1024px) {
+    .iframe-contenedor {
+        max-width: 60%; /* En pantallas más grandes (PC), ocupa el 60% del contenedor */
+    }
+}
+
