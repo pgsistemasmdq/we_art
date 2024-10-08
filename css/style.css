@@ -802,7 +802,7 @@ footer
 /*
  TERMINOS 
 */
-.terminos-contenedor {
+.terminos-contenedor .politicas-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente */
@@ -813,23 +813,23 @@ footer
     border-radius: 10px;
     margin-top: 30px;
 }
-.terminos-contenedor h1 {
+.terminos-contenedor .politicas-contenedor h1 {
     font-size: 22px;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 30px;
 
 }
-.terminos-contenedor div {
+.terminos-contenedor .politicas-contenedor div {
     width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
 }
-.terminos-contenedor div h2 {
+.terminos-contenedor .politicas-contenedor div h2 {
     font-size: 18px;
     text-align: center;
     text-decoration: underline;
 }
 
-.terminos-contenedor div p {
+.terminos-contenedor .politicas-contenedor div p {
     font-size: 14px;
     text-align: justify;
     margin-top: 20px;
