@@ -718,12 +718,13 @@ footer
 /*!---------NOSOTROS--------*/
 /*!-------------------------*/
 .nosotros_container {
-    width: 800px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .nosotros_titulo {
@@ -734,11 +735,13 @@ footer
 }
 
 .nosotros_contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 10px;
 }
 
 .nosotros_descripcion {
-    margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.6;
     color: #555;
@@ -746,8 +749,9 @@ footer
 }
 
 .nosotros_equipo {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nosotros_equipo h2 {
@@ -764,6 +768,7 @@ footer
     padding: 5px;
     background-color: #fff;
 }
+
 
 
 #carouselExampleFade {
@@ -1128,3 +1133,34 @@ footer
     }
 }
 
+/*media query NOSOTROS*/
+@media (min-width: 768px) {
+    .nosotros_contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros_descripcion {
+        flex: 2;
+    }
+
+    .nosotros_equipo {
+        flex: 1;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nosotros_container {
+        padding: 40px;
+    }
+
+    .nosotros_titulo {
+        font-size: 36px;
+    }
+
+    .nosotros_descripcion {
+        font-size: 18px;
+    }
+}
