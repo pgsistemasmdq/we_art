@@ -12,8 +12,9 @@ body {
     background-color: #FFC300 ; 
 }
 
-/*?----------HEADER -----------*/
-/*?----------HEADER -----------*/
+/*----------------------------*/
+/*----------HEADER -----------*/
+/*----------------------------*/
 header {
     height: 60px;
     padding: 5px;
@@ -63,6 +64,7 @@ header div img{
     margin-left: 10px;
 }
 
+/* ---- NAVBAR BOOTSTRAP ----- */
 .btn-outline-success {
     background-color: white ; /* Cambia el color de fondo cuando pases el mouse */
     color: #FFC300 ; /* Asegura que el color del texto sea visible en hover */
@@ -79,11 +81,12 @@ header div img{
     background-color: inherit !important; /* Hereda el color de fondo del body */
     height: 60px !important; /* Ajustar la altura del nav */
     padding: 0 !important; /* Eliminar el padding para reducir el alto */
-  }
+}
 
-  .nav-item .nav-link .bi-person-fill {
+.nav-item .nav-link .bi-person-fill {
     font-size: 1.5rem; /* Aumenta el tamaño del icono */
 }
+/* Fin navbar de bootstrap */
 
 /*!-------------------------*/
 /*!---------MAIN -----------*/
@@ -115,6 +118,11 @@ header div img{
 
 }
 
+/*----------------------------  */
+/* SECCION NUEVOS LANZAMIENTOS */
+/*-----------------------------*/
+
+
 #nuevos_lanzamientos  h2{
     color: white;
     font-weight:lighter;
@@ -128,10 +136,9 @@ header div img{
     white-space: normal; 
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; /* Añadir para que los elementos se ajusten en pantallas más pequeñas */
+    flex-wrap: wrap; 
 
 }
-
 
 .contenedor-nuevos-lanzamientos div {
     display: flex;
@@ -164,6 +171,10 @@ header div img{
     width: 100%;
 }
 
+/*----------------------------  */
+/* SECCION DESTACADOS          */
+/*-----------------------------*/
+
 #seccion_destacados {
     text-align: center;
     white-space: normal;
@@ -188,8 +199,8 @@ header div img{
 
 .destacados {
     display: flex;
-    justify-content: space-around; /* Distribuye las tarjetas con espacios iguales entre ellas */
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples líneas si no caben en una sola */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
     width: 100%;
     margin: 0 auto;
 }
@@ -232,6 +243,11 @@ header div img{
     margin-top: 10px;
     font-weight: bold;
 }
+
+
+/*---------------------------- */
+/*         IFRAME              */
+/*-----------------------------*/
 
 .iframe-contenedor {
     display: flex;
@@ -367,7 +383,7 @@ footer
   }
 
 /*!-------------------------*/
-/*!---------INSTRUMENTOS -----------*/
+/*!---------INSTRUMENTOS ----*/
 /*!-------------------------*/
 
 
@@ -430,7 +446,7 @@ footer
 
 
 /*!-------------------------*/
-/*!---------GUITARRA FENDER -----------*/
+/*!---------GUITARRA FENDER ---*/
 /*!-------------------------*/
 
 #producto {
@@ -455,13 +471,7 @@ footer
     align-items: start;
     text-align: left;
 }
-/*
-.imagen-principal {
-    flex: 1; 
-    margin-right: 20px; 
-    text-align: center;
-}
-*/
+
 .imagen-principal img {
     width: 100%;
     height: auto;
@@ -469,8 +479,6 @@ footer
 }
 
 .descripcion {
-    /*flex: 1; 
-    padding-left: 20px;*/
     box-sizing: border-box;
 }
 
@@ -759,8 +767,6 @@ footer
     background-color: #fff;
 }
 
-
-
 #carouselExampleFade {
     padding-left: 20%;
     padding-right: 20%;
@@ -811,7 +817,7 @@ footer
 
 }
 .terminos-contenedor div {
-    width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
+    width: 100%; 
 }
 .terminos-contenedor div h2 {
     font-size: 18px;
@@ -825,8 +831,121 @@ footer
     margin-top: 20px;
 }
 
-/* MEADI QUERYS */
-/*MENU CUANDO SE CONVIERTE EN DESPLAGABLE - BOOTSTRAP */
+/*---------------------------------------*/
+/*---------------------------------------*/
+/*           MEDIA QUERIES               */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+/*MEDIA QUERY SECTION NUEVOS LANZAMIENTOS */
+@media (max-width: 1024px) {
+    /*NUEVOS LANZAMIENTOS */
+    .contenedor-nuevos-lanzamientos div {
+        width: 45%; 
+    }
+    #nuevos_lanzamientos h2 {
+        font-size: 26px; 
+    }
+    .contenedor-nuevos-lanzamientos div h3 {
+        font-size: 22px; 
+    }
+    .contenedor-nuevos-lanzamientos div img {
+        height: 250px; 
+    }
+    /*PRODUCTOS DESTACADOS */
+    .tarjeta_producto_destacado {
+        width: 45%; /* Aumentar el tamaño de las tarjetas en pantallas medianas */
+        height: auto; /* Permitir que la altura sea automática */
+        margin: 10px;
+    }
+    .tarjeta_producto_destacado img {
+        height: 180px; /* Ajustar el tamaño de las imágenes en tablets */
+    }
+    .tarjeta_producto_nombre {
+        font-size: 16px; /* Reducir tamaño del nombre del producto */
+    }
+    .tarjeta_producto_precio {
+        font-size: 18px; /* Reducir tamaño del precio */
+    }
+    /*CARROUSEL */
+    #carouselExampleFade {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #carouselExampleFade .carousel-item img {
+        width: 500px; /* Reducir el ancho de las imágenes */
+        height: 250px; /* Ajustar la altura en tabletas */
+    }
+
+    #section-carrousel h2 {
+        font-size: 25px; /* Reducir tamaño del título en tabletas */
+    }
+
+    /*HISTORIAS*/
+    .historia {
+        flex-direction: column-reverse; /* Con esto cambio a columna y pongo el texto arriba y las imágenes abajo */
+        gap: 10px;
+    }
+
+    .historia_texto h2 {
+        font-size: 22px;
+    }
+
+    .historia_texto p {
+        font-size: 15px;
+    }
+
+    .historia_imagen img {
+        width: 100%; 
+    }
+
+    /*CONTACTO*/
+    .contacto_container {
+        max-width: 800px;
+    }
+
+    .contacto_container form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contacto_input_group {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .contacto_input_group textarea, 
+    .contacto_input_group button {
+        flex: 0 1 50%;
+    }
+    .iframe-contenedor {
+        max-width: 60%; /* En pantallas más grandes (PC), ocupa el 60% del contenedor */
+    }
+
+    /*NOSOTROS*/ 
+    .nosotros_container {
+        padding: 40px;
+    }
+
+    .nosotros_titulo {
+        font-size: 36px;
+    }
+
+    .nosotros_descripcion {
+        font-size: 18px;
+    }
+    .contenido {
+        grid-template-columns: 1fr; /* Una sola columna en tablet */
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Imágenes más pequeñas en tablet */
+    }
+}
+
+
 @media (max-width: 992px) {
     /* Acicar form  */
     form.d-flex {
@@ -844,9 +963,6 @@ footer
       height: 30px;
       font-size: 12px;
     }
-  
-   
-   
     .navbar-collapse {
       background-color: #FFC300;
       position: absolute;
@@ -869,72 +985,17 @@ footer
 
     }
 
- 
-
   }
-/* MEDIA QUERY PARA INDEX */
 
-/* MEDIA QUERY PARA INSTRUMENTOS / SONIDO / PINTURA */
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     .productos_lista {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila en pantallas medianas */
     }
 }
 
-@media (max-width: 600px) {
-    .productos_lista {
-        grid-template-columns: 1fr; /* 1 columna por fila en pantallas chicas */
-    }
-}
-
-/*MEDIA QUERY PARA FOOTER*/
-@media (max-width: 750px) {
-    
-    .footer-contenedor {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-derecha {
-        margin-top: 10px;
-    }
-    .footer-mapa{
-        display:none;
-      }    
-}
 
 
-/*MEDIA QUERY HERO */
-@media (max-width: 750px) {
-    .hero_anuncio {
-        font-size: 45px;
-      
-    }
-}
-@media (max-width: 550px) {
-    .hero_anuncio {
-        font-size: 35px;
-      
-    }
-}
 
-
-/*MEDIA QUERY SECTION NUEVOS LANZAMIENTOS */
-@media (max-width: 1024px) {
-    .contenedor-nuevos-lanzamientos div {
-        width: 45%; 
-    }
-    #nuevos_lanzamientos h2 {
-        font-size: 26px; 
-    }
-    .contenedor-nuevos-lanzamientos div h3 {
-        font-size: 22px; 
-    }
-    .contenedor-nuevos-lanzamientos div img {
-        height: 250px; 
-    }
-}
-
-/* Teléfonos - Pantallas pequeñas */
 @media (max-width: 768px) {
     .contenedor-nuevos-lanzamientos {
         flex-direction: column; /* Cambiar a una columna los elementos */
@@ -957,30 +1018,7 @@ footer
     .contenedor-nuevos-lanzamientos div p {
         font-size: 12px; /* Reducir el tamaño del texto en móviles */
     }
-}
 
-
-/*MEDIA QUERY SECTION DESTACADOS */
-/* Pantallas medianas (Tablet - Ancho entre 768px y 1024px) */
-@media (max-width: 1024px) {
-    .tarjeta_producto_destacado {
-        width: 45%; /* Aumentar el tamaño de las tarjetas en pantallas medianas */
-        height: auto; /* Permitir que la altura sea automática */
-        margin: 10px;
-    }
-    .tarjeta_producto_destacado img {
-        height: 180px; /* Ajustar el tamaño de las imágenes en tablets */
-    }
-    .tarjeta_producto_nombre {
-        font-size: 16px; /* Reducir tamaño del nombre del producto */
-    }
-    .tarjeta_producto_precio {
-        font-size: 18px; /* Reducir tamaño del precio */
-    }
-}
-
-/* Pantallas pequeñas (Móviles - Ancho menor a 768px) */
-@media (max-width: 768px) {
     .destacados {
         flex-direction: column; /* Cambiar las tarjetas a formato vertical */
         align-items: center; /* Centrar las tarjetas */
@@ -1002,28 +1040,7 @@ footer
     .tarjeta_producto_precio {
         font-size: 16px; /* Reducir el tamaño del precio */
     }
-}
 
-
-/* Pantallas medianas (tabletas - entre 768px y 1024px) */
-@media (max-width: 1024px) {
-    #carouselExampleFade {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    #carouselExampleFade .carousel-item img {
-        width: 500px; /* Reducir el ancho de las imágenes */
-        height: 250px; /* Ajustar la altura en tabletas */
-    }
-
-    #section-carrousel h2 {
-        font-size: 25px; /* Reducir tamaño del título en tabletas */
-    }
-}
-
-/* TELEFONO */
-@media (max-width: 768px) {
     #carouselExampleFade {
         padding-left: 5%;
         padding-right: 5%;
@@ -1039,32 +1056,7 @@ footer
         font-size: 20px; 
         margin: 5px;
     }
-}
 
-
-/*MEDIA QUERY PARA HISTORIAS*/
-/*TABLETS*/
-@media (max-width: 1024px) {
-    .historia {
-        flex-direction: column-reverse; /* Con esto cambio a columna y pongo el texto arriba y las imágenes abajo */
-        gap: 10px;
-    }
-
-    .historia_texto h2 {
-        font-size: 22px;
-    }
-
-    .historia_texto p {
-        font-size: 15px;
-    }
-
-    .historia_imagen img {
-        width: 100%; 
-    }
-}
-
-/*TELEFONOS*/
-@media (max-width: 768px) {
     .historia_container {
         width: 95%; 
     }
@@ -1085,54 +1077,15 @@ footer
     .historia_imagen img {
         width: 100%; 
     }
-}
 
-/*MEDIA QUEry contacto */
-/* Media queries para responsividad */
-@media (min-width: 768px) {
     .contacto_container {
         max-width: 600px;
     }
-}
 
-@media (min-width: 1024px) {
-    .contacto_container {
-        max-width: 800px;
-    }
-
-    .contacto_container form {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .contacto_input_group {
-        flex: 1 1 calc(50% - 20px);
-    }
-
-    .contacto_input_group textarea, 
-    .contacto_input_group button {
-        flex: 0 1 50%;
-    }
-}
-
-
-/* Ajustes para diferentes dispositivos */
-@media (min-width: 768px) {
     .iframe-contenedor {
         max-width: 80%; /* En tabletas, ocupa el 80% del contenedor */
     }
-}
 
-@media (min-width: 1024px) {
-    .iframe-contenedor {
-        max-width: 60%; /* En pantallas más grandes (PC), ocupa el 60% del contenedor */
-    }
-}
-
-/*media query NOSOTROS*/
-@media (min-width: 768px) {
     .nosotros_contenido {
         flex-direction: row;
         justify-content: space-between;
@@ -1147,33 +1100,7 @@ footer
         flex: 1;
         margin-top: 0;
     }
-}
 
-@media (min-width: 1024px) {
-    .nosotros_container {
-        padding: 40px;
-    }
-
-    .nosotros_titulo {
-        font-size: 36px;
-    }
-
-    .nosotros_descripcion {
-        font-size: 18px;
-    }
-}
-/*MQ GUITARRA FENDER */
-@media (max-width: 1024px) {
-    .contenido {
-        grid-template-columns: 1fr; /* Una sola columna en tablet */
-    }
-
-    .galeria {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Imágenes más pequeñas en tablet */
-    }
-}
-
-@media (max-width: 768px) {
     .contenido {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
@@ -1184,6 +1111,69 @@ footer
 
     #producto {
         padding: 15px;
+    }
+
+    .registro_container {
+        max-width: 60%;
+    }
+}
+
+  /*MEDIA QUERY PARA FOOTER*/
+  @media (max-width: 750px) {
+    
+    .footer-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-derecha {
+        margin-top: 10px;
+    }
+    .footer-mapa{
+        display:none;
+      }    
+
+    .hero_anuncio {
+        font-size: 45px;
+      
+    }
+}
+
+  /*?MEDIA QUERY REGISTRO */
+@media (max-width: 600px) {
+    .registro_container {
+        max-width: 90%;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .registro_container form button {
+        font-size: 14px;
+    }
+    .productos_lista {
+        grid-template-columns: 1fr; /* 1 columna por fila en pantallas chicas */
+    }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .registro_container {
+        max-width: 80%;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .registro_container form button {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .hero_anuncio {
+        font-size: 35px;
+      
     }
 }
 
@@ -1198,37 +1188,11 @@ footer
 }
 
 
-/*?MEDIA QUERY REGISTRO */
-@media (max-width: 600px) {
-    .registro_container {
-        max-width: 90%;
-    }
 
-    .form-group label {
-        font-size: 14px;
-    }
 
-    .registro_container form button {
-        font-size: 14px;
-    }
-}
 
-@media (min-width: 601px) and (max-width: 768px) {
-    .registro_container {
-        max-width: 80%;
-    }
 
-    .form-group label {
-        font-size: 16px;
-    }
 
-    .registro_container form button {
-        font-size: 16px;
-    }
-}
 
-@media (min-width: 769px) {
-    .registro_container {
-        max-width: 60%;
-    }
-}
+
+
