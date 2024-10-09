@@ -444,7 +444,6 @@ footer
     margin-top: auto; /* Mantiene el texto alineado al final */
 }
 
-
 /*!-------------------------*/
 /*!---------GUITARRA FENDER ---*/
 /*!-------------------------*/
@@ -617,7 +616,7 @@ footer
     margin-bottom: 40px;
     display: flex;
     gap: 20px;
-    flex-direction: row; /* Elementos en fila por defecto */
+    flex-direction: row; 
 
 }
 
@@ -854,8 +853,8 @@ footer
     }
     /*PRODUCTOS DESTACADOS */
     .tarjeta_producto_destacado {
-        width: 45%; /* Aumentar el tamaño de las tarjetas en pantallas medianas */
-        height: auto; /* Permitir que la altura sea automática */
+        width: 45%; 
+        height: auto; 
         margin: 10px;
     }
     .tarjeta_producto_destacado img {
@@ -875,11 +874,11 @@ footer
 
     #carouselExampleFade .carousel-item img {
         width: 500px; /* Reducir el ancho de las imágenes */
-        height: 250px; /* Ajustar la altura en tabletas */
+        height: 250px; /* Ajustar la altura en tablet */
     }
 
     #section-carrousel h2 {
-        font-size: 25px; /* Reducir tamaño del título en tabletas */
+        font-size: 25px; /* Reducir tamaño del título en tablet */
     }
 
     /*HISTORIAS*/
@@ -941,7 +940,7 @@ footer
     }
 
     .galeria {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Imágenes más pequeñas en tablet */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Imágenes más chicas en tablet */
     }
 }
 
@@ -1002,7 +1001,7 @@ footer
         align-items: center; /* Centrar los elementos */
     }
     .contenedor-nuevos-lanzamientos div {
-        width: 90%; /* Ancho más grande en móviles para ocupar casi todo el ancho */
+        width: 90%; 
     }
     #nuevos_lanzamientos h2 {
         font-size: 22px; /* Reducir aún más el tamaño del título */
@@ -1021,18 +1020,18 @@ footer
 
     .destacados {
         flex-direction: column; /* Cambiar las tarjetas a formato vertical */
-        align-items: center; /* Centrar las tarjetas */
+        align-items: center; 
     }
     .tarjeta_producto_destacado {
         width: 90%; /* Usar casi todo el ancho disponible en móviles */
-        height: auto; /* Permitir altura automática */
+        height: auto; 
         margin: 10px 0; /* Ajustar el margen */
     }
     .tarjeta_producto_destacado img {
-        height: 150px; /* Reducir la altura de las imágenes en móviles */
+        height: 150px; 
     }
     .tarjeta_producto_nombre {
-        font-size: 14px; /* Reducir el tamaño del nombre del producto */
+        font-size: 14px; 
     }
     .tarjeta_producto_marca {
         font-size: 12px; /* Reducir el tamaño de la marca */
@@ -1048,7 +1047,7 @@ footer
 
     #carouselExampleFade .carousel-item img {
         width: 100%; /* Ancho completo para móviles */
-        height: auto; /* Ajustar la altura automáticamente */
+        height: auto; 
         object-fit: contain; /* Asegura que las imágenes no se recorten en móviles */
     }
 
@@ -1083,7 +1082,7 @@ footer
     }
 
     .iframe-contenedor {
-        max-width: 80%; /* En tabletas, ocupa el 80% del contenedor */
+        max-width: 80%; 
     }
 
     .nosotros_contenido {
