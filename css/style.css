@@ -463,19 +463,19 @@ footer
 }
 
 .contenido {
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: flex-start; /* Alinea los elementos al principio (arriba) */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales para imagen y descripción */
+    gap: 20px;
+    align-items: start;
     text-align: left;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
 }
-
+/*
 .imagen-principal {
-    flex: 1; /* La imagen ocupará 1 parte del espacio total */
-    margin-right: 20px; /* Separación con la descripción */
+    flex: 1; 
+    margin-right: 20px; 
     text-align: center;
 }
-
+*/
 .imagen-principal img {
     width: 100%;
     height: auto;
@@ -483,8 +483,8 @@ footer
 }
 
 .descripcion {
-    flex: 1; /* La descripción ocupará 1 parte del espacio total */
-    padding-left: 20px;
+    /*flex: 1; 
+    padding-left: 20px;*/
     box-sizing: border-box;
 }
 
@@ -494,14 +494,13 @@ footer
 
 .galeria {
     margin-top: 30px;
-    display: flex; /* Flexbox para la galería de imágenes */
-    justify-content: center; /* Centrar las imágenes */
-    gap: 1%; /* Separación entre imágenes */
-    flex-wrap: wrap; /* Para que las imágenes se ajusten en pantallas más pequeñas */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid con columnas automáticas */
+    gap: 10px; /* Separación entre imágenes */
 }
 
 .galeria img {
-    width: 18%;
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -802,7 +801,7 @@ footer
 /*
  TERMINOS 
 */
-.terminos-contenedor .politicas-contenedor {
+.terminos-contenedor{
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente */
@@ -813,23 +812,23 @@ footer
     border-radius: 10px;
     margin-top: 30px;
 }
-.terminos-contenedor .politicas-contenedor h1 {
+.terminos-contenedor h1 {
     font-size: 22px;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 30px;
 
 }
-.terminos-contenedor .politicas-contenedor div {
+.terminos-contenedor div {
     width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
 }
-.terminos-contenedor .politicas-contenedor div h2 {
+.terminos-contenedor div h2 {
     font-size: 18px;
     text-align: center;
     text-decoration: underline;
 }
 
-.terminos-contenedor .politicas-contenedor div p {
+.terminos-contenedor div p {
     font-size: 14px;
     text-align: justify;
     margin-top: 20px;
@@ -1162,5 +1161,39 @@ footer
 
     .nosotros_descripcion {
         font-size: 18px;
+    }
+}
+/*MQ GUITARRA FENDER */
+@media (max-width: 1024px) {
+    .contenido {
+        grid-template-columns: 1fr; /* Una sola columna en tablet */
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Imágenes más pequeñas en tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Imágenes más pequeñas en pantallas pequeñas */
+    }
+
+    #producto {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Imágenes más pequeñas en móviles */
+    }
+
+    #producto {
+        padding: 10px;
     }
 }
