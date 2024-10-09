@@ -5,9 +5,14 @@
 
 - 💬Tengo conocimientos de : **Sql, Postgresl, C#,**
 
-- el Proyecto se llama we_art y es una web realacionada a mudica, pintura y sonido. 
-Esta desarrollo usando html, csss, bootstrap y aplicando en distintas secciones box model, flexbox y grid
-
+- el Proyecto se llama we_art y es una web realacionada a música, pintura y sonido. 
+Está desarrollado usando html, css, bootstrap y aplicando en distintas secciones box model, flexbox y grid.
+El Proyecto consta de 11 archivos html y un archivo css.
+  - Los archivos instrumentos.html, sonido.html, pintura.html y guitarra_fender.html estan estructurados con grid y flexbox , el resto con flexbox.
+  - El Footer de cada pagina esta estrcutrado con flexbox.
+  - La barra de navegacion proviene de bootstrap, con algunos cambios cuando se colapsa para dispositivos mas chicos.
+  - Todas las paginas tienen aplicada MQ para lograr que sean resposivas
+ 
 <h3 align="left">Pueden contactarme en:</h3>
 <p align="left">
 <a href="https://twitter.com/pgimemdq" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="pgimemdq" height="30" width="40" /></a>
