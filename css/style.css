@@ -81,6 +81,10 @@ header div img{
     padding: 0 !important; /* Eliminar el padding para reducir el alto */
   }
 
+  .nav-item .nav-link .bi-person-fill {
+    font-size: 1.5rem; /* Aumenta el tamaño del icono */
+}
+
 /*!-------------------------*/
 /*!---------MAIN -----------*/
 /*!-------------------------*/
@@ -228,21 +232,6 @@ header div img{
     margin-top: 10px;
     font-weight: bold;
 }
-/*
-.iframe-contenedor {
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.iframe-titulo {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: white;
-    font-weight:lighter;
-
-}
-*/
 
 .iframe-contenedor {
     display: flex;
@@ -266,10 +255,6 @@ header div img{
     height: auto;
     aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto */
 }
-
-
-
-
 
 
 /*!-------------------------*/
@@ -380,6 +365,7 @@ footer
     opacity: 0.7; /* Ajusta la opacidad (1 es completamente opaco, 0 es completamente transparente) */
     transition: opacity 0.3s ease; /* Añade una transición suave al cambiar la opacidad */
   }
+
 /*!-------------------------*/
 /*!---------INSTRUMENTOS -----------*/
 /*!-------------------------*/
@@ -509,10 +495,16 @@ footer
 /*!-------------------------*/
 /*!---------REGISTRO--------*/
 /*!-------------------------*/
+.registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .registro_container {
     width: 100%;
     max-width: 400px;
-    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -525,18 +517,28 @@ footer
     margin-bottom: 20px;
 }
 
-.registro_container form label {
-    display: inline-block;
-    width: 100px;
-    margin-bottom: 10px;
-    vertical-align: top;
+.registro_tipo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.registro_container form input {
-    display: inline-block;
-    width: calc(100% - 120px);
-    padding: 8px;
+.registro_tipo label {
+    margin-right: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -556,15 +558,6 @@ footer
     background-color: #45a049;
 }
 
-.registro_container .tipo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.registro_container .tipo label {
-    margin-right: 20px;
-}
-
 .registro_container .recuperar-password {
     text-align: center;
     margin-top: 20px;
@@ -579,7 +572,6 @@ footer
     text-decoration: underline;
 }
 
-
 .volver-home-button {
     position: absolute;
     bottom: 10px;
@@ -589,12 +581,11 @@ footer
     height: 35px;
 }
 
-.volver-home-button  img {
+.volver-home-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 /*!-------------------------*/
 /*!---------HISTORIAS-------*/
 /*!-------------------------*/
@@ -835,8 +826,8 @@ footer
 }
 
 /* MEADI QUERYS */
-/*MENU CUANDO SE CONVIERTE EN DESPLAGABLE*/
-@media (max-width: 991px) {
+/*MENU CUANDO SE CONVIERTE EN DESPLAGABLE - BOOTSTRAP */
+@media (max-width: 992px) {
     /* Acicar form  */
     form.d-flex {
       width: 100%;
@@ -863,16 +854,23 @@ footer
       top: 100%;
       width: auto; /* Ancho de opciones */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+      padding: 0 10px 10px 10px;
     }
 
     .navbar-nav {
       width: max-content; /* Ajustar el ancho al contenido */
       background-color: #FFC300;
     }
-  
-    .nav-link {
-      white-space: nowrap; /*No saltar */
+
+    .navbar-collapse .nav-link {
+        padding: 0px 0; /* Ajusta el padding vertical */
+        line-height: 1.5; /* Ajusta la altura de línea para reducir el espacio entre líneas */
+        white-space: nowrap; /*No saltar */
+
     }
+
+ 
+
   }
 /* MEDIA QUERY PARA INDEX */
 
@@ -903,6 +901,7 @@ footer
         display:none;
       }    
 }
+
 
 /*MEDIA QUERY HERO */
 @media (max-width: 750px) {
@@ -1195,5 +1194,41 @@ footer
 
     #producto {
         padding: 10px;
+    }
+}
+
+
+/*?MEDIA QUERY REGISTRO */
+@media (max-width: 600px) {
+    .registro_container {
+        max-width: 90%;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .registro_container form button {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .registro_container {
+        max-width: 80%;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .registro_container form button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .registro_container {
+        max-width: 60%;
     }
 }
