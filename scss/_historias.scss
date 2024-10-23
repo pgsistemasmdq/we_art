@@ -1,0 +1,57 @@
+/*!-------------------------*/
+/*!---------HISTORIAS-------*/
+/*!-------------------------*/
+
+.historia_container {
+    width: 80%;
+    margin: 20px auto;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        color: map-get($colores-historias , titulo );
+    }
+
+    .historia {
+        background-color:map-get($colores-historias , fondo );;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .historia_imagen {
+            flex: 1;
+
+            img {
+                width: 90%;
+                margin-bottom: 20px;
+                border-radius: 8px;
+            }
+        }
+
+        .historia_texto {
+            flex: 2;
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: map-get($colores-historias , subtitulo );;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: map-get($colores-historias , parrafo );;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin boton-estilo($bg-color, $text-color, $padding, $font-size) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($bg-color, 20%);
+    }
+  }
+
+  @mixin boton-estilo-ancho-variable($bg-color, $text-color, $padding, $font-size, $width) {
+    width: $width;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($bg-color, 20%);
+    }
+  }

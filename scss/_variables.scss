@@ -1,0 +1,39 @@
+$color-principal: #FFC300  ; 
+$color-fondo-titulos: #d8a704;
+$font-family : 'Roboto', sans-serif;
+$fondo-ficha-producto : #fcf3cf;
+
+/*listas*/
+$colores-textos-terminos: whitesmoke, #333333, #666666, #000000 ; // Lista de colores
+
+// Índices de los colores:
+// 1. Color para el fondo del contenido
+// 2. Color para los títulos
+// 3. Color para los subtítulos
+// 4. Color para los párrafos
+
+/*mapas*/
+$colores-grilla-tarjeta: (
+  "fondo": #fff,   // Color para el fondo del contenido
+  "titulo": #000000  ,      // Color para los títulos
+  "subtitulo": #666,   // Color para los subtítulos
+  "parrafo": #000000      // Color para los párrafos
+);
+
+$colores-historias: (
+  "fondo":#fff ,   // Color para el fondo del contenido
+  "titulo": #fff  ,      // Color para los títulos
+  "subtitulo": #37474f,   // Color para los subtítulos
+  "parrafo": #000000     // Color para los párrafos
+);
+
+$colores-productos-destacados: (
+  "titulo": white  ,      // Color para los títulos
+  "fondo-titulo": #d8a704,   // Color para los subtítulos
+  "fondo-tarjeta": #fff,      // Color para los párrafos
+  "borde-tarjeta": #ddd,      // Color para los párrafos
+  "marca-tarjeta": #555,      // Color para los párrafos
+  "precio-tarjeta": #d32f2f     // Color para los párrafos
+
+);
+

@@ -1,0 +1,167 @@
+/*----------------------------*/
+/*---------- FOOTER -----------*/
+/*----------------------------*/
+/* Variables */
+$primary-color: #fff;
+$border-color: #2c2b2b;
+
+/* Footer General */
+footer {
+    height: 140px;
+    color: $primary-color;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .center-line {
+        border-top: 1px solid $border-color;
+        width: 50%;
+        margin: 5px auto;
+    }
+
+    .footer-contenedor {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+        /* Diseño responsivo: una columna a partir de 750px */
+        @media (max-width: 750px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-izquerda {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            @media (max-width: 750px) {
+                width: 100%;
+                margin-bottom: 10px;
+                align-items: flex-start;
+            }
+
+            .footer-logo {
+                img {
+                    width: 160px;
+                    margin: 10px 5px;
+                }
+            }
+
+            .footer-redes {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: start;
+                padding-top: 10px;
+
+                img {
+                    width: 35px;
+                    margin: 0 10px;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+
+        .footer-centro {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+
+            @media (max-width: 750px) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                margin-bottom: 5px;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .footer-derecha {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            height: 100px;
+
+            .footer-contacto,
+            .footer-mapa {
+                width: 45%;
+            }
+
+            .footer-contacto {
+                margin: 0 5px;
+                padding-top: 5px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                p {
+                    a{
+                        color: $primary-color;
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .footer-mapa {
+                margin: 5px;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+
+                iframe {
+                    width: 100%;
+                    margin: 5px;
+                }
+            }
+
+            @media (max-width: 750px) {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .footer-contacto {
+                    width: 50%;
+                }
+
+                .footer-mapa {
+                    width: 50%;
+                }
+
+                /* Ocultar mapa a partir de 750px */
+                .footer-mapa {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* Centrar todo el contenido en el footer a partir de 750px */
+    @media (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer-contenedor {
+            justify-content: center;
+        }
+    }
+}

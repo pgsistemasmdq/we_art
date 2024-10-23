@@ -1,0 +1,54 @@
+/*!-------------------------*/
+/*!---------NOSOTROS--------*/
+/*!-------------------------*/
+.nosotros_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    .nosotros_titulo {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 32px;
+        color: #333;
+    }
+
+    .nosotros_contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+
+        .nosotros_descripcion {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        .nosotros_equipo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                margin-bottom: 15px;
+                font-size: 24px;
+                color: #333;
+            }
+            
+            .nosotros_equipo_img {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                border: 1px solid #ccc;
+                padding: 5px;
+                background-color: #fff;
+            }
+        }
+        
+    }
+}

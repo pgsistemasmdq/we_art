@@ -1,0 +1,108 @@
+/*----------------------------*/
+/*----------HEADER -----------*/
+/*----------------------------*/
+
+header {
+  height: 60px;
+  padding: 5px;
+  margin: 5px 20px 20px 10px;
+  vertical-align: middle;
+
+  .logo_header {
+    height: 60px;
+    width: 160px;
+    display: inline-block;
+  }
+
+  div {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 15px;
+
+    img {
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  nav {
+    display: inline-block;
+    margin-left: 20px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 80px;
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+
+          &:hover {
+            color: darken(#333, 10%); // Por ejemplo, un cambio de color al pasar
+          }
+        }
+      }
+    }
+  }
+
+  .btn-outline-success {
+    background-color: white;
+    color: $color-principal;
+    border-color: $color-principal;
+
+    &:hover {
+      background-color: #ce9e02;
+      color: white;
+      border-color: $color-principal;
+    }
+  }
+
+  .navbar {
+    background-color: inherit !important;
+    height: 60px !important;
+    padding: 0 !important;
+
+    .nav-item {
+      .nav-link {
+        .bi-person-fill {
+          font-size: 1.5rem; // Tamaño del ícono aumentado
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .btn {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .navbar-collapse {
+    background-color: $color-principal;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: auto; // Ancho ajustable
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra para dar efecto
+    padding: 0 10px 10px 10px;
+
+    .navbar-nav {
+      width: max-content;
+      background-color: $color-principal;
+
+      .nav-link {
+        padding: 0px 0; // Ajuste de padding vertical
+        line-height: 1.5; // Ajusta la altura de línea para reducir el espacio entre enlaces
+        white-space: nowrap; // Evitar el salto de línea
+      }
+    }
+  }
+}

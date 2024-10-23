@@ -1,0 +1,67 @@
+/*!-------------------------*/
+/*!---------PRODUCTOS----------*/
+/*!----PAGINAS INTRUMENTOS , SONIDO Y PINTURA ---------------------*/
+/*!----TODAS USAN LAS MISMAS CLASES ---------------------*/
+/* General */
+
+
+.contenedor_productos_lista {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: lighter;
+    color: white;
+  }
+
+  .productos_lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Por defecto 3 columnas */
+    gap: 20px;
+
+    /* Responsivo */
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas hasta 1024px */
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr); /* 1 columna hasta 768px */
+    }
+
+    .productos_lista_tarjeta {
+      
+      @extend .tarjeta-base;
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #666;
+      }
+
+      a {
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: auto; /* Mantiene el texto alineado al final */
+      }
+    }
+  }
+}
