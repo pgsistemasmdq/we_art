@@ -6,63 +6,79 @@ $primary-color: #fff;
 $border-color: #2c2b2b;
 
 /* Footer General */
+/*----------------------------*/
+/*---------- FOOTER -----------*/
+/*----------------------------*/
 footer {
-    height: 140px;
+    height: auto; // Permitir altura dinámica
     color: $primary-color;
-    padding: 10px;
+    padding: 20px 10px;
     width: 100%;
     box-sizing: border-box;
 
     .center-line {
         border-top: 1px solid $border-color;
-        width: 50%;
-        margin: 5px auto;
+        width: 100%; // Línea centrada al 100% de ancho
+        margin: 5px 0;
     }
 
     .footer-contenedor {
-        text-align: left;
         display: flex;
         justify-content: space-between;
+        text-align: left;
+        width: 100%;
 
-        /* Diseño responsivo: una columna a partir de 750px */
+        /* Diseño responsivo: columna a partir de 750px */
         @media (max-width: 750px) {
             flex-direction: column;
             align-items: center;
             text-align: center;
+            padding: 10px 0;
         }
 
-        .footer-izquerda {
+        .footer-izquerda,
+        .footer-centro,
+        .footer-derecha {
             width: 30%;
-            height: 100px;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
+            height: auto;
+            margin-bottom: 10px;
 
             @media (max-width: 750px) {
                 width: 100%;
-                margin-bottom: 10px;
-                align-items: flex-start;
             }
+        }
 
+        .footer-izquerda {
+            display: flex; // Habilitar flexbox
+            flex-direction: column; // Apilar elementos verticalmente
+            align-items: center; // Centrar horizontalmente
+            text-align: center; // Centrar texto
+        
+            @media (max-width: 750px) {
+                width: 100%;
+                margin-bottom: 10px;
+                align-items: center; // Asegura que siga centrado en pantallas pequeñas
+            }
+        
             .footer-logo {
                 img {
-                    width: 160px;
-                    margin: 10px 5px;
+                    width: 160px; // Mantener el tamaño del logo
+                    margin: 10px 5px; // Margen alrededor de la imagen
                 }
             }
-
+        
             .footer-redes {
-                width: 100%;
-                height: 50px;
-                display: flex;
-                justify-content: start;
+                width: 100%; // Ocupar todo el ancho disponible
+                height: auto; // Permitir altura dinámica
+                display: flex; // Habilitar flexbox
+                justify-content: center; // Centrar las redes
                 padding-top: 10px;
-
+        
                 img {
                     width: 35px;
                     margin: 0 10px;
                     transition: transform 0.3s ease;
-
+        
                     &:hover {
                         transform: scale(1.5);
                     }
@@ -71,22 +87,14 @@ footer {
         }
 
         .footer-centro {
-            width: 30%;
-            height: 100px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            text-align: center;
-
-            @media (max-width: 750px) {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
+            align-items: center;
             a {
                 text-decoration: none;
                 color: $primary-color;
-                margin-bottom: 5px;
+                font-size: 0.9em;
+                margin: 5px 0;
 
                 &:hover {
                     font-weight: bold;
@@ -96,72 +104,21 @@ footer {
 
         .footer-derecha {
             display: flex;
-            justify-content: space-between;
-            width: 30%;
-            height: 100px;
-
+            justify-content: space-around;
             .footer-contacto,
             .footer-mapa {
                 width: 45%;
-            }
-
-            .footer-contacto {
-                margin: 0 5px;
-                padding-top: 5px;
                 text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                p {
-                    a{
-                        color: $primary-color;
-                        &:hover {
-                            font-weight: bold;
-                        }
-                    }
+
+                p, a {
+                    font-size: 0.9em;
                 }
             }
 
-            .footer-mapa {
-                margin: 5px;
-                opacity: 0.7;
-                transition: opacity 0.3s ease;
-
-                iframe {
-                    width: 100%;
-                    margin: 5px;
-                }
+            .footer-mapa iframe {
+                margin-left:10px;
+                width: 80%;
             }
-
-            @media (max-width: 750px) {
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-
-                .footer-contacto {
-                    width: 50%;
-                }
-
-                .footer-mapa {
-                    width: 50%;
-                }
-
-                /* Ocultar mapa a partir de 750px */
-                .footer-mapa {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    /* Centrar todo el contenido en el footer a partir de 750px */
-    @media (max-width: 750px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .footer-contenedor {
-            justify-content: center;
         }
     }
 }

@@ -9,7 +9,8 @@
   border-radius: 10px;
   height: auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 20px; }
 
 * {
   /*reseteo de margenes y padding */
@@ -45,6 +46,9 @@ body {
     color: #FFC300; }
     .hero .hero_anuncio:hover {
       color: #997500; }
+    @media (max-width: 430px) {
+      .hero .hero_anuncio {
+        font-size: 50px; } }
 
 /*----------------------------*/
 /* SECCION NUEVOS LANZAMIENTOS */
@@ -280,6 +284,16 @@ header {
       width: 100%;
       border-radius: 10px;
       object-fit: cover; }
+  @media (max-width: 500px) {
+    #producto .contenido {
+      grid-template-columns: 1fr; }
+      #producto .contenido .imagen-principal {
+        width: 75%;
+        margin: 0 auto; }
+        #producto .contenido .imagen-principal img {
+          width: 100%; }
+      #producto .contenido .descripcion {
+        width: 100%; } }
 
 /*!-------------------------*/
 /*!---------PRODUCTOS----------*/
@@ -463,14 +477,19 @@ header {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  max-width: 400px;
-  width: 100%; }
+  /*max-width: 400px;
+    width: 100%;*/
+  width: 80%; }
+  .contacto_container form {
+    width: 70%;
+    margin: 20px; }
   .contacto_container h1,
   .contacto_container p {
     text-align: center; }
   .contacto_container .contacto_input_group {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 20px;
+    /*margin-bottom: 15px;*/
     display: flex;
     flex-direction: column; }
     .contacto_container .contacto_input_group label {
@@ -482,7 +501,7 @@ header {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 10px;
       background-color: #f9f9f9;
       font-size: 14px; }
     .contacto_container .contacto_input_group textarea {
@@ -569,46 +588,60 @@ header {
 /*----------------------------*/
 /* Variables */
 /* Footer General */
+/*----------------------------*/
+/*---------- FOOTER -----------*/
+/*----------------------------*/
 footer {
-  height: 140px;
+  height: auto;
   color: #fff;
-  padding: 10px;
+  padding: 20px 10px;
   width: 100%;
-  box-sizing: border-box;
-  /* Centrar todo el contenido en el footer a partir de 750px */ }
+  box-sizing: border-box; }
   footer .center-line {
     border-top: 1px solid #2c2b2b;
-    width: 50%;
-    margin: 5px auto; }
+    width: 100%;
+    margin: 5px 0; }
   footer .footer-contenedor {
-    text-align: left;
     display: flex;
     justify-content: space-between;
-    /* Diseño responsivo: una columna a partir de 750px */ }
+    text-align: left;
+    width: 100%;
+    /* Diseño responsivo: columna a partir de 750px */ }
     @media (max-width: 750px) {
       footer .footer-contenedor {
         flex-direction: column;
         align-items: center;
-        text-align: center; } }
-    footer .footer-contenedor .footer-izquerda {
+        text-align: center;
+        padding: 10px 0; } }
+    footer .footer-contenedor .footer-izquerda,
+    footer .footer-contenedor .footer-centro,
+    footer .footer-contenedor .footer-derecha {
       width: 30%;
-      height: 100px;
+      height: auto;
+      margin-bottom: 10px; }
+      @media (max-width: 750px) {
+        footer .footer-contenedor .footer-izquerda,
+        footer .footer-contenedor .footer-centro,
+        footer .footer-contenedor .footer-derecha {
+          width: 100%; } }
+    footer .footer-contenedor .footer-izquerda {
       display: flex;
       flex-direction: column;
-      text-align: left; }
+      align-items: center;
+      text-align: center; }
       @media (max-width: 750px) {
         footer .footer-contenedor .footer-izquerda {
           width: 100%;
           margin-bottom: 10px;
-          align-items: flex-start; } }
+          align-items: center; } }
       footer .footer-contenedor .footer-izquerda .footer-logo img {
         width: 160px;
         margin: 10px 5px; }
       footer .footer-contenedor .footer-izquerda .footer-redes {
         width: 100%;
-        height: 50px;
+        height: auto;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         padding-top: 10px; }
         footer .footer-contenedor .footer-izquerda .footer-redes img {
           width: 35px;
@@ -617,67 +650,30 @@ footer {
           footer .footer-contenedor .footer-izquerda .footer-redes img:hover {
             transform: scale(1.5); }
     footer .footer-contenedor .footer-centro {
-      width: 30%;
-      height: 100px;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center; }
-      @media (max-width: 750px) {
-        footer .footer-contenedor .footer-centro {
-          width: 100%;
-          margin-bottom: 10px; } }
+      align-items: center; }
       footer .footer-contenedor .footer-centro a {
         text-decoration: none;
         color: #fff;
-        margin-bottom: 5px; }
+        font-size: 0.9em;
+        margin: 5px 0; }
         footer .footer-contenedor .footer-centro a:hover {
           font-weight: bold; }
     footer .footer-contenedor .footer-derecha {
       display: flex;
-      justify-content: space-between;
-      width: 30%;
-      height: 100px; }
+      justify-content: space-around; }
       footer .footer-contenedor .footer-derecha .footer-contacto,
       footer .footer-contenedor .footer-derecha .footer-mapa {
-        width: 45%; }
-      footer .footer-contenedor .footer-derecha .footer-contacto {
-        margin: 0 5px;
-        padding-top: 5px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly; }
-        footer .footer-contenedor .footer-derecha .footer-contacto p a {
-          color: #fff; }
-          footer .footer-contenedor .footer-derecha .footer-contacto p a:hover {
-            font-weight: bold; }
-      footer .footer-contenedor .footer-derecha .footer-mapa {
-        margin: 5px;
-        opacity: 0.7;
-        transition: opacity 0.3s ease; }
-        footer .footer-contenedor .footer-derecha .footer-mapa iframe {
-          width: 100%;
-          margin: 5px; }
-      @media (max-width: 750px) {
-        footer .footer-contenedor .footer-derecha {
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          /* Ocultar mapa a partir de 750px */ }
-          footer .footer-contenedor .footer-derecha .footer-contacto {
-            width: 50%; }
-          footer .footer-contenedor .footer-derecha .footer-mapa {
-            width: 50%; }
-          footer .footer-contenedor .footer-derecha .footer-mapa {
-            display: none; } }
-  @media (max-width: 750px) {
-    footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      footer .footer-contenedor {
-        justify-content: center; } }
+        width: 45%;
+        text-align: center; }
+        footer .footer-contenedor .footer-derecha .footer-contacto p, footer .footer-contenedor .footer-derecha .footer-contacto a,
+        footer .footer-contenedor .footer-derecha .footer-mapa p,
+        footer .footer-contenedor .footer-derecha .footer-mapa a {
+          font-size: 0.9em; }
+      footer .footer-contenedor .footer-derecha .footer-mapa iframe {
+        margin-left: 10px;
+        width: 80%; }
 
 .eventos h1 {
   text-align: center;
@@ -694,8 +690,8 @@ footer {
   gap: 10px; }
   .eventos .contenedor-eventos .contenedor-fechas {
     background: linear-gradient(90deg, #fa0505 0%, #fe8401 52%);
-    width: 30%;
-    max-width: 80px;
+    width: 25%;
+    /*max-width: 80px;*/
     padding: 10px;
     border-radius: 20px 0px 0px 20px;
     display: flex;
@@ -705,8 +701,7 @@ footer {
     .eventos .contenedor-eventos .contenedor-fechas p {
       font-family: 'Nerko One';
       color: white;
-      font-size: 18px;
-      font-weight: bolder;
+      font-size: 25px;
       margin: 4px 0; }
   .eventos .contenedor-eventos .contenedor-espectaculo {
     background: linear-gradient(90deg, #fe8401 0%, #fea201 52%, #fe9e01 98%);
@@ -731,12 +726,18 @@ footer {
         padding: 8px;
         border-radius: 10px; }
       .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda p:first-of-type {
-        font-size: 22px;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
         font-weight: bold;
-        color: black; }
+        color: black;
+        line-height: 1; }
       .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda p:last-of-type {
+        margin: 0;
+        padding: 0;
         font-size: 16px;
-        color: grey; }
+        color: grey;
+        line-height: 1; }
       .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda-descripcion {
         font-size: 14px;
         line-height: 1.4;
@@ -746,6 +747,12 @@ footer {
       width: 20%; }
     .eventos .contenedor-eventos .contenedor-espectaculo img {
       width: 20%; } }
+  @media (max-width: 915px) {
+    .eventos .contenedor-eventos .contenedor-fechas p {
+      font-size: 20px; } }
+  @media (max-width: 830px) {
+    .eventos .contenedor-eventos .contenedor-fechas p {
+      font-size: 16px; } }
   @media (max-width: 768px) {
     .eventos .contenedor-eventos {
       flex-direction: column;
@@ -763,8 +770,9 @@ footer {
         align-items: center;
         gap: 10px; }
         .eventos .contenedor-eventos .contenedor-fechas p {
-          font-size: 14px;
-          margin: 0; }
+          font-size: 30px;
+          margin: 0;
+          line-height: 0.5; }
       .eventos .contenedor-eventos .contenedor-espectaculo img {
         width: 100%;
         max-width: 120px;
@@ -776,7 +784,7 @@ footer {
       flex-direction: column; } }
   @media (max-width: 350px) {
     .eventos .contenedor-eventos .contenedor-fechas p {
-      font-size: 14px; }
+      font-size: 25px; }
     .eventos .contenedor-eventos .contenedor-espectaculo img {
       width: 80px; }
     .eventos .contenedor-eventos .contenedor-espectaculo-detalle .contenedor-banda p {

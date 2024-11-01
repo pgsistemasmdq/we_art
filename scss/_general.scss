@@ -35,7 +35,11 @@ body {
       &:hover {
         color: darken($color-principal, 20%);
       }
+    @media (max-width: 430px) {
+        font-size: 50px;
+      }
     }
+
   }
   
   /*----------------------------*/
