@@ -489,7 +489,6 @@ header {
   .contacto_container .contacto_input_group {
     width: 100%;
     margin: 20px;
-    /*margin-bottom: 15px;*/
     display: flex;
     flex-direction: column; }
     .contacto_container .contacto_input_group label {

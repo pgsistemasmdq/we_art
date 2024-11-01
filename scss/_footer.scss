@@ -10,7 +10,7 @@ $border-color: #2c2b2b;
 /*---------- FOOTER -----------*/
 /*----------------------------*/
 footer {
-    height: auto; // Permitir altura dinámica
+    height: auto; 
     color: $primary-color;
     padding: 20px 10px;
     width: 100%;
@@ -18,7 +18,7 @@ footer {
 
     .center-line {
         border-top: 1px solid $border-color;
-        width: 100%; // Línea centrada al 100% de ancho
+        width: 100%; 
         margin: 5px 0;
     }
 
@@ -62,16 +62,16 @@ footer {
         
             .footer-logo {
                 img {
-                    width: 160px; // Mantener el tamaño del logo
-                    margin: 10px 5px; // Margen alrededor de la imagen
+                    width: 160px; 
+                    margin: 10px 5px; 
                 }
             }
         
             .footer-redes {
-                width: 100%; // Ocupar todo el ancho disponible
-                height: auto; // Permitir altura dinámica
-                display: flex; // Habilitar flexbox
-                justify-content: center; // Centrar las redes
+                width: 100%; 
+                height: auto; 
+                display: flex; 
+                justify-content: center; 
                 padding-top: 10px;
         
                 img {
