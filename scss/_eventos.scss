@@ -1,0 +1,156 @@
+.eventos {
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        color: map-get($colores-historias, titulo);
+    }
+
+    .contenedor-eventos {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+
+        .contenedor-fechas {
+            background: linear-gradient(90deg, rgba(250, 5, 5, 1) 0%, rgba(254, 132, 1, 1) 52%);
+            width: 30%;
+            max-width: 80px;
+            padding: 10px;
+            border-radius: 20px 0px 0px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family: 'Nerko One';
+                color: white;
+                font-size: 18px;
+                font-weight: bolder;
+                margin: 4px 0;
+            }
+        }
+
+        .contenedor-espectaculo {
+            background: linear-gradient(90deg, rgba(254, 132, 1, 1) 0%, rgba(254, 162, 1, 1) 52%, rgba(254, 158, 1, 1) 98%);
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 0px 20px 20px 0px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 25%;
+                max-width: 120px;
+                margin-right: 10px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .contenedor-espectaculo-detalle {
+                flex-grow: 1;
+                padding: 10px;
+
+                .contenedor-banda,
+                .contenedor-banda-descripcion {
+                    background-color: whitesmoke;
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 10px;
+                }
+
+                .contenedor-banda {
+                    p:first-of-type {
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: black;
+                    }
+
+                    p:last-of-type {
+                        font-size: 16px;
+                        color: grey;
+                    }
+                }
+
+                .contenedor-banda-descripcion {
+                    font-size: 14px;
+                    line-height: 1.4;
+                    color: black;
+                }
+            }
+        }
+
+        // Ajustes para pantallas grandes (1440px y más)
+        @media (min-width: 1440px) {
+            .contenedor-fechas {
+                width: 20%;
+            }
+
+            .contenedor-espectaculo img {
+                width: 20%;
+            }
+        }
+
+        // Responsivo para pantallas medianas (horizontal a columna)
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+
+            .contenedor-fechas,
+            .contenedor-espectaculo {
+                width: 100% ;
+                border-radius: 20px;
+                margin: 5px 0;
+                max-width: none;
+            }
+
+            .contenedor-fechas {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+
+            .contenedor-espectaculo img {
+                width: 100%;
+                max-width: 120px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 600px) {
+            .contenedor-espectaculo {
+                margin: 10px auto;
+                padding: 10px;
+                flex-direction: column;
+
+            }
+        }
+
+        @media (max-width: 350px) {
+            .contenedor-fechas p {
+                font-size: 14px;
+            }
+
+            .contenedor-espectaculo img {
+                width: 80px;
+            }
+
+            .contenedor-espectaculo-detalle .contenedor-banda p {
+                font-size: 14px;
+            }
+
+            .contenedor-espectaculo-detalle .contenedor-banda-descripcion {
+                font-size: 10px;
+            }
+        }
+    }
+}

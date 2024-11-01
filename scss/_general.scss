@@ -24,7 +24,8 @@ body {
     background-attachment: fixed;
     font-family: 'Nerko One', cursive;
     text-align: left;
-  
+    margin-top: 30px;
+    margin-bottom: 30px;
     .hero_anuncio {
       font-size: 60px;
       margin-top: 5px;
@@ -57,6 +58,8 @@ body {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      margin: 20px;
+      padding: 20px;
   
       div {
         display: flex;
@@ -124,17 +127,17 @@ body {
       justify-content: space-around;
       flex-wrap: wrap;
       width: 100%;
-      margin: 0 auto;
+      margin: 20px auto;
   
       .tarjeta_producto_destacado {
         background-color: map-get($colores-productos-destacados, fondo-tarjeta);
         border: 1px solid map-get($colores-productos-destacados, borde-tarjeta);
-        border-radius: 8px;
+        border-radius: 10%;
         text-align: center;
         padding: 20px;
         width: 30%;
         height: 350px;
-        margin: 10px;
+        margin: 20px;
         box-sizing: border-box;
   
         img {
@@ -180,18 +183,18 @@ body {
   #section-carrousel {
     background-color: $color-principal;
     align-items: center;
-  
     h2 {
       color: white;
       font-weight: lighter;
       font-size: 30px;
       text-align: center;
-      margin: 10px;
+      margin: 20px;
       background-color: #d8a704;
     }
     #carouselExampleFade {
         padding-left: 20%;
         padding-right: 20%;
+        border-radius: 10% !important;
         .carousel-item img {
           width: 600;
             height: 300px; /* Altura del carrusel */
@@ -211,8 +214,9 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10%;
   
     .iframe-titulo {
       font-size: 1.2rem;
@@ -221,7 +225,7 @@ body {
     }
   
     iframe {
-      width: 100%;
+      width: 90%;
       height: auto;
       aspect-ratio: 16 / 9;
     }

@@ -3,9 +3,10 @@
 /*----------------------------*/
 
 header {
-  height: 60px;
-  padding: 5px;
+  height: 65px;
+  padding: 10px;
   margin: 5px 20px 20px 10px;
+
   vertical-align: middle;
 
   .logo_header {
@@ -13,45 +14,10 @@ header {
     width: 160px;
     display: inline-block;
   }
+  /*aca va lo eleiminadao */
 
-  div {
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 15px;
-
-    img {
-      height: 20px;
-      margin-left: 10px;
-    }
-  }
-
-  nav {
-    display: inline-block;
-    margin-left: 20px;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      line-height: 80px;
-
-      li {
-        display: inline-block;
-        margin: 0 10px;
-
-        a {
-          text-decoration: none;
-          color: #333;
-          font-size: 16px;
-
-          &:hover {
-            color: darken(#333, 10%); // Por ejemplo, un cambio de color al pasar
-          }
-        }
-      }
-    }
-  }
-
+  /*    */
+ 
   .btn-outline-success {
     background-color: white;
     color: $color-principal;
@@ -67,7 +33,7 @@ header {
   .navbar {
     background-color: inherit !important;
     height: 60px !important;
-    padding: 0 !important;
+    padding: 10px !important;
 
     .nav-item {
       .nav-link {

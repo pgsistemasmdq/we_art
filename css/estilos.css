@@ -35,7 +35,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Nerko One', cursive;
-  text-align: left; }
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px; }
   .hero .hero_anuncio {
     font-size: 60px;
     margin-top: 5px;
@@ -60,7 +62,9 @@ body {
   white-space: normal;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px; }
   #nuevos_lanzamientos .contenedor-nuevos-lanzamientos div {
     display: flex;
     flex-direction: column;
@@ -110,16 +114,16 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0 auto; }
+    margin: 20px auto; }
     #seccion_destacados .destacados .tarjeta_producto_destacado {
       background-color: #fff;
       border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 10%;
       text-align: center;
       padding: 20px;
       width: 30%;
       height: 350px;
-      margin: 10px;
+      margin: 20px;
       box-sizing: border-box; }
       #seccion_destacados .destacados .tarjeta_producto_destacado img {
         width: 100%;
@@ -154,11 +158,12 @@ body {
     font-weight: lighter;
     font-size: 30px;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
     background-color: #d8a704; }
   #section-carrousel #carouselExampleFade {
     padding-left: 20%;
-    padding-right: 20%; }
+    padding-right: 20%;
+    border-radius: 10% !important; }
     #section-carrousel #carouselExampleFade .carousel-item img {
       width: 600;
       height: 300px;
@@ -175,14 +180,15 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
-  padding: 10px; }
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10%; }
   .iframe-contenedor .iframe-titulo {
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: center; }
   .iframe-contenedor iframe {
-    width: 100%;
+    width: 90%;
     height: auto;
     aspect-ratio: 16 / 9; }
 
@@ -190,38 +196,16 @@ body {
 /*----------HEADER -----------*/
 /*----------------------------*/
 header {
-  height: 60px;
-  padding: 5px;
+  height: 65px;
+  padding: 10px;
   margin: 5px 20px 20px 10px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  /*aca va lo eleiminadao */
+  /*    */ }
   header .logo_header {
     height: 60px;
     width: 160px;
     display: inline-block; }
-  header div {
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 15px; }
-    header div img {
-      height: 20px;
-      margin-left: 10px; }
-  header nav {
-    display: inline-block;
-    margin-left: 20px; }
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      line-height: 80px; }
-      header nav ul li {
-        display: inline-block;
-        margin: 0 10px; }
-        header nav ul li a {
-          text-decoration: none;
-          color: #333;
-          font-size: 16px; }
-          header nav ul li a:hover {
-            color: #1a1a1a; }
   header .btn-outline-success {
     background-color: white;
     color: #FFC300;
@@ -233,7 +217,7 @@ header {
   header .navbar {
     background-color: inherit !important;
     height: 60px !important;
-    padding: 0 !important; }
+    padding: 10px !important; }
     header .navbar .nav-item .nav-link .bi-person-fill {
       font-size: 1.5rem; }
 
@@ -694,3 +678,108 @@ footer {
       align-items: center; }
       footer .footer-contenedor {
         justify-content: center; } }
+
+.eventos h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: #fff; }
+
+.eventos .contenedor-eventos {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  align-items: stretch;
+  gap: 10px; }
+  .eventos .contenedor-eventos .contenedor-fechas {
+    background: linear-gradient(90deg, #fa0505 0%, #fe8401 52%);
+    width: 30%;
+    max-width: 80px;
+    padding: 10px;
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .eventos .contenedor-eventos .contenedor-fechas p {
+      font-family: 'Nerko One';
+      color: white;
+      font-size: 18px;
+      font-weight: bolder;
+      margin: 4px 0; }
+  .eventos .contenedor-eventos .contenedor-espectaculo {
+    background: linear-gradient(90deg, #fe8401 0%, #fea201 52%, #fe9e01 98%);
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    align-items: center; }
+    .eventos .contenedor-eventos .contenedor-espectaculo img {
+      width: 25%;
+      max-width: 120px;
+      margin-right: 10px;
+      object-fit: cover;
+      border-radius: 10px; }
+    .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle {
+      flex-grow: 1;
+      padding: 10px; }
+      .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda,
+      .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda-descripcion {
+        background-color: whitesmoke;
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 10px; }
+      .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda p:first-of-type {
+        font-size: 22px;
+        font-weight: bold;
+        color: black; }
+      .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda p:last-of-type {
+        font-size: 16px;
+        color: grey; }
+      .eventos .contenedor-eventos .contenedor-espectaculo .contenedor-espectaculo-detalle .contenedor-banda-descripcion {
+        font-size: 14px;
+        line-height: 1.4;
+        color: black; }
+  @media (min-width: 1440px) {
+    .eventos .contenedor-eventos .contenedor-fechas {
+      width: 20%; }
+    .eventos .contenedor-eventos .contenedor-espectaculo img {
+      width: 20%; } }
+  @media (max-width: 768px) {
+    .eventos .contenedor-eventos {
+      flex-direction: column;
+      align-items: center; }
+      .eventos .contenedor-eventos .contenedor-fechas,
+      .eventos .contenedor-eventos .contenedor-espectaculo {
+        width: 100%;
+        border-radius: 20px;
+        margin: 5px 0;
+        max-width: none; }
+      .eventos .contenedor-eventos .contenedor-fechas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; }
+        .eventos .contenedor-eventos .contenedor-fechas p {
+          font-size: 14px;
+          margin: 0; }
+      .eventos .contenedor-eventos .contenedor-espectaculo img {
+        width: 100%;
+        max-width: 120px;
+        margin: 0 auto; } }
+  @media (max-width: 600px) {
+    .eventos .contenedor-eventos .contenedor-espectaculo {
+      margin: 10px auto;
+      padding: 10px;
+      flex-direction: column; } }
+  @media (max-width: 350px) {
+    .eventos .contenedor-eventos .contenedor-fechas p {
+      font-size: 14px; }
+    .eventos .contenedor-eventos .contenedor-espectaculo img {
+      width: 80px; }
+    .eventos .contenedor-eventos .contenedor-espectaculo-detalle .contenedor-banda p {
+      font-size: 14px; }
+    .eventos .contenedor-eventos .contenedor-espectaculo-detalle .contenedor-banda-descripcion {
+      font-size: 10px; } }
