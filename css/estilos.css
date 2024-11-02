@@ -60,6 +60,9 @@ body {
   text-align: center;
   margin: 10px;
   background-color: #d8a704; }
+  @media (max-width: 560px) {
+    #nuevos_lanzamientos h2 {
+      font-size: 20px; } }
 
 #nuevos_lanzamientos .contenedor-nuevos-lanzamientos {
   text-align: center;
@@ -98,7 +101,7 @@ body {
 
 @media (max-width: 768px) {
   #nuevos_lanzamientos .contenedor-nuevos-lanzamientos div {
-    width: 100%; } }
+    width: 80%; } }
 
 /*----------------------------*/
 /* SECCION DESTACADOS */
@@ -113,6 +116,9 @@ body {
     text-align: center;
     margin: 10px;
     background-color: #d8a704; }
+    @media (max-width: 560px) {
+      #seccion_destacados h2 {
+        font-size: 20px; } }
   #seccion_destacados .destacados {
     display: flex;
     justify-content: space-around;
@@ -152,7 +158,7 @@ body {
       width: 45%; } }
   @media (max-width: 768px) {
     #seccion_destacados .destacados .tarjeta_producto_destacado {
-      width: 100%; } }
+      width: 80%; } }
 
 #section-carrousel {
   background-color: #FFC300;
@@ -164,16 +170,24 @@ body {
     text-align: center;
     margin: 20px;
     background-color: #d8a704; }
+    @media (max-width: 560px) {
+      #section-carrousel h2 {
+        font-size: 20px; } }
   #section-carrousel #carouselExampleFade {
     padding-left: 20%;
-    padding-right: 20%;
-    border-radius: 10% !important; }
+    padding-right: 20%; }
     #section-carrousel #carouselExampleFade .carousel-item img {
-      width: 600;
-      height: 300px;
+      width: 80%;
+      height: auto;
       /* Altura del carrusel */
+      max-height: 250px;
       object-fit: contain;
       /* Para que la imagen se ajuste al tamaño sin distorsionarse */ }
+    @media (max-width: 768px) {
+      #section-carrousel #carouselExampleFade {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: 5px; } }
 
 /*----------------------------*/
 /* IFRAME */
@@ -185,14 +199,13 @@ body {
   justify-content: center;
   width: 100%;
   margin: 20px auto;
-  padding: 20px;
-  border-radius: 10%; }
+  padding: 20px; }
   .iframe-contenedor .iframe-titulo {
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: center; }
   .iframe-contenedor iframe {
-    width: 90%;
+    width: 80%;
     height: auto;
     aspect-ratio: 16 / 9; }
 
@@ -307,7 +320,6 @@ header {
   .contenedor_productos_lista h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-weight: lighter;
     color: white; }
   .contenedor_productos_lista .productos_lista {
     display: grid;
@@ -352,7 +364,6 @@ header {
   .historia_container h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-weight: lighter;
     color: #fff; }
   .historia_container .historia {
     background-color: #fff;
@@ -677,7 +688,6 @@ footer {
 .eventos h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-weight: lighter;
   color: #fff; }
 
 .eventos .contenedor-eventos {
