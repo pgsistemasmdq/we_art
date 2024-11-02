@@ -58,7 +58,6 @@ body {
   font-weight: lighter;
   font-size: 30px;
   text-align: center;
-  margin: 10px;
   background-color: #d8a704; }
   @media (max-width: 560px) {
     #nuevos_lanzamientos h2 {
@@ -70,7 +69,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 5px;
   padding: 20px; }
   #nuevos_lanzamientos .contenedor-nuevos-lanzamientos div {
     display: flex;
@@ -114,17 +113,16 @@ body {
     font-weight: lighter;
     font-size: 30px;
     text-align: center;
-    margin: 10px;
     background-color: #d8a704; }
     @media (max-width: 560px) {
       #seccion_destacados h2 {
         font-size: 20px; } }
   #seccion_destacados .destacados {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    margin: 20px auto; }
+    margin: 10px  auto; }
     #seccion_destacados .destacados .tarjeta_producto_destacado {
       background-color: #fff;
       border: 1px solid #ddd;

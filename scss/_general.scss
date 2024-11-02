@@ -52,7 +52,6 @@ body {
       font-weight: lighter;
       font-size: 30px;
       text-align: center;
-      margin: 10px;
       background-color: #d8a704;
       @media (max-width: 560px) {
         font-size: 20px;
@@ -65,7 +64,7 @@ body {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      margin: 20px;
+      margin: 5px;
       padding: 20px;
   
       div {
@@ -119,13 +118,11 @@ body {
   #seccion_destacados {
     text-align: center;
     white-space: normal;
-  
     h2 {
       color: map-get($colores-productos-destacados, titulo);
       font-weight: lighter;
       font-size: 30px;
       text-align: center;
-      margin: 10px;
       background-color: map-get($colores-productos-destacados, fondo-titulo);
       @media (max-width: 560px) {
         font-size: 20px;
@@ -134,11 +131,10 @@ body {
   
     .destacados {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       flex-wrap: wrap;
       width: 100%;
-      margin: 20px auto;
-  
+      margin: 10px  auto;
       .tarjeta_producto_destacado {
         background-color: map-get($colores-productos-destacados, fondo-tarjeta);
         border: 1px solid map-get($colores-productos-destacados, borde-tarjeta);
